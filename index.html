@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Protfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio</div>
+                <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>I am <span>Amitha</span><br>Student of CMRIT, Hyderabad</h1>
+            </div>
+        </div>
+
+    </div>
+    <!-- --------------------about----------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="amitha1.jpeg">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am P.Amitha, Currently I'm pursuing B.Tech in CMRIT in the stream of Computer Science and Engineering</p>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C</span></li>
+                            
+                            <li><span>Python</span></li>
+                            <li><span>My SQL</span></li>
+                            <li><span>HTML, CSS</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2024 (BTech)</span><br>CMR Institute of Technology, Hyderabad (CSE)</li>
+                            <li><span>2018-2020 (Intermediate)</span><br>Narayana Junior College, Bachupally (MPC)</li>
+                            <li><span>2017-2018 (SSC)</span><br>Saint Claire High School, Ramagundam</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list"> 
+                <div>
+                    <h2>Technical Skills</h2>
+                        <ul>
+                            
+                            <li>C</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>HTML,CSS,Java Script</li>
+                        </ul>
+                       
+                </div>
+                <div>
+                    
+                     <h2>Certifications</h2>
+                     <ul>
+                         <li><a href="#">Database Management System - INFOSYS </a></li>
+                         <li><a href="#">Java programming - INFOSYS</a></li>
+                         <li><a href="#">Python</a></li>
+                         <li><a href="#">AWS Cloud Architecting & Cloud Foundations - AWS Academy</a></li>                    
+                     </ul><br>
+                     <p>Note:Click the above statements you may find related Certifications</p>
+                     <a href="#"> Learn More</a>
+                 </div>
+                 <div>
+                    <!-- <i class="fab fa-app-store"></i>-->
+                     <h2>Achievements</h2>
+                     <ul>
+                     <li>NCC Certificate</li></ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="contact">
+        <div class="container">
+           <div class="row">
+               <div class="contact-left">
+                   <h1 class="sub-title">Contact Me</h1>
+                   <p><i class="fas fa-paper-plane"></i>amithapenchala@gmail.com</p>
+                   <p><i class="fa fa-phone-square"></i>7995627094</p>
+                   <div class="social-icons">
+                       
+                       <a href="https://www.linkedin.com/in/penchala-amitha-10172a238/"><i class="fab fa-linkedin"></i></a>
+                       <a href="https://github.com/AmithaPenchala"><i class="fab fa-github"></i></a>
+                   </div>
+                   <a href="Amitha.pdf" download class="btn btn2">Download Resume</a>
+               </div>
+               <div class="contact-right">
+                   <form>
+                       <input type="text" name="Name" placeholder="Your Name" required>
+                       <input type="email" name="email" placeholder="Your Email" required>
+                       <textarea naem="Message" rows="6" placeholder="Your Message"></textarea>
+                       <button type="submit" class="btn btn2">Submit</button>
+                   </form>
+               </div>
+           </div>
+        </div>
+        <div class="copyright">
+        <footer>
+           <p>Copyright © created by Amitha</p>
+       </footer>
+       </div>
+       </div>
+       
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+         for(tablink of tablinks){
+             tablink.classList.remove("active-link");
+         }
+         for(tabcontents of tabcontents){
+             tabcontents.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script> 
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+          sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    
+    </script>    
+    <script src="https://kit.fontawesome.com/8ceb11f307.js" crossorigin="anonymous"></script> 
+    
+</body>
+</html>
